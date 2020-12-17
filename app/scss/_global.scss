@@ -16,8 +16,8 @@ a{
   color: #000;
 }
 
-container {
-  max-width: 1090px;
+.container {
+  max-width: 1830px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -37,4 +37,7 @@ p {
 
 li {
   display: inline-block;
+}
+body {
+  background-color: black;
 }

@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 100%;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  margin-right: auto;
+  margin-left: 200px;
+}
+.header__links {
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  li:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.header__link {
+  color: #fff;
+  text-transform: uppercase;
+  transition: color .5s;
+  &:hover {
+    color: $mainOrangeColor;
+  }
+}
+.header__social li:not(:last-child) {
+  margin-right: 25px;
+}
+.header__social-link {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  transition: color .5s;
+  &:hover {
+    color: $mainOrangeColor;
+  }
+}
