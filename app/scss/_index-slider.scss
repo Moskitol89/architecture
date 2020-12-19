@@ -1,0 +1,51 @@
+.main-slider__container {
+  height: 100vh;
+  width: 100%;
+}
+.main-slider__slide {
+  height: 100%;
+}
+.main-slider__slide-name {
+  position: absolute;
+  top: 400px;
+  transform: rotate(270deg);
+  color: #fff;
+  width: fit-content;
+  font-weight: 400;
+  font-family: "Open sans", sans-serif;
+}
+.main-slider__introduce {
+  margin-left: 400px;
+  color: #fff;
+  margin-top: 300px;
+}
+.main-slider__introduce-welcome {
+  font-family: "Open sans", sans-serif;
+  line-height: 26px;
+  padding-left: 5px;
+}
+.main-slider__introduce-title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 105px;
+  span {
+    display: block;
+  }
+  &--orange{
+    color: $mainOrangeColor;
+  }
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: $mainOrangeColor;
+}
+.swiper-container-vertical>.swiper-pagination-bullets {
+  right: 25px;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 24px 0;
+}
