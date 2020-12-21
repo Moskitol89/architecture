@@ -22,12 +22,16 @@
   li:not(:last-child) {
     margin-right: 50px;
   }
+
 }
 .header__link {
   color: #fff;
   text-transform: uppercase;
   transition: color .5s;
   &:hover {
+    color: $mainOrangeColor;
+  }
+  &.active {
     color: $mainOrangeColor;
   }
 }

@@ -2,50 +2,130 @@
   height: 100vh;
   width: 100%;
 }
+
 .main-slider__slide {
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .main-slider__slide-name {
   position: absolute;
-  top: 400px;
+  top: 50px;
+  text-transform: uppercase;
   transform: rotate(270deg);
   color: #fff;
+  left: -9999px;
   width: fit-content;
   font-weight: 400;
   font-family: "Open sans", sans-serif;
 }
+
 .main-slider__introduce {
   margin-left: 400px;
   color: #fff;
   margin-top: 300px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: $mainOrangeColor;
+    left: 5px;
+    bottom: -100px;
+  }
 }
+
 .main-slider__introduce-welcome {
   font-family: "Open sans", sans-serif;
   line-height: 26px;
   padding-left: 5px;
+  opacity: 0;
+  margin-bottom: 20px;
 }
-.main-slider__introduce-title {
+
+.main-slider__title {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
   font-size: 90px;
   line-height: 105px;
+
   span {
+    opacity: 0;
     display: block;
   }
-  &--orange{
-    color: $mainOrangeColor;
+
+  &--orange {
+    color: #FCD54C;
   }
 }
+
 .swiper-pagination-bullet {
   background-color: #fff;
   opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
   background-color: $mainOrangeColor;
 }
-.swiper-container-vertical>.swiper-pagination-bullets {
+
+.swiper-container-vertical > .swiper-pagination-bullets {
   right: 25px;
 }
-.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 24px 0;
+}
+
+//active slide animation
+.main-slider__slide.activated {
+  .main-slider__slide-name {
+    animation: fromLeft 0.5s 0s forwards;
+  }
+  .main-slider__introduce-welcome {
+    animation: fadeIn 0.5s 0.5s forwards;
+  }
+  .main-slider__title--first {
+    animation: fadeIn 0.5s 1s forwards;
+  }
+  .main-slider__title--second {
+    animation: fadeIn 0.5s 1.5s forwards;
+  }
+  .main-slider__title--third {
+    animation: fadeIn 0.5s 2s forwards;
+  }
+  .main-slider__introduce {
+    &:after {
+      animation: stretchOut 1s 2.5s forwards;
+    }
+  }
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stretchOut{
+  from {
+    width: 0;
+  }
+  to {
+    width: 134px;
+  }
+}@keyframes fromLeft{
+  from {
+    left: -9999px;
+  }
+  to {
+   left: -20px;
+  }
 }
