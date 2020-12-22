@@ -17,12 +17,13 @@
   transform: rotate(270deg);
   color: #fff;
   left: -9999px;
-  width: fit-content;
+  width: 110px;
   font-weight: 400;
   font-family: "Open sans", sans-serif;
 }
 
-.main-slider__introduce {
+//introduce block start
+.introduce__text-block {
   margin-left: 400px;
   color: #fff;
   margin-top: 300px;
@@ -39,7 +40,7 @@
   }
 }
 
-.main-slider__introduce-welcome {
+.introduce__welcome {
   font-family: "Open sans", sans-serif;
   line-height: 26px;
   padding-left: 5px;
@@ -47,8 +48,7 @@
   margin-bottom: 20px;
 }
 
-.main-slider__title {
-  font-family: "Gilroy", sans-serif;
+.introduce__title {
   font-weight: 700;
   font-size: 90px;
   line-height: 105px;
@@ -56,10 +56,6 @@
   span {
     opacity: 0;
     display: block;
-  }
-
-  &--orange {
-    color: #FCD54C;
   }
 }
 
@@ -85,25 +81,121 @@
   .main-slider__slide-name {
     animation: fromLeft 0.5s 0s forwards;
   }
-  .main-slider__introduce-welcome {
+
+  .introduce__welcome {
     animation: fadeIn 0.5s 0.5s forwards;
   }
-  .main-slider__title--first {
+
+  .introduce__title--first {
     animation: fadeIn 0.5s 1s forwards;
   }
-  .main-slider__title--second {
+
+  .introduce__title--second {
     animation: fadeIn 0.5s 1.5s forwards;
   }
-  .main-slider__title--third {
+
+  .introduce__title--third {
     animation: fadeIn 0.5s 2s forwards;
   }
-  .main-slider__introduce {
+
+  .introduce__text-block {
     &:after {
       animation: stretchOut 1s 2.5s forwards;
     }
   }
-
 }
+
+//introduce block end
+//services block start
+.services {
+  background-color: #272727;
+}
+
+.services__inner {
+  max-width: 1110px;
+  margin: 300px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__count {
+  position: relative;
+}
+
+.services__count-number, .services__count-plus {
+  font-weight: 700;
+  color: $textOrangeColor;
+  font-size: 170px;
+}
+
+.services__count-plus {
+  position: absolute;
+  font-size: 80px;
+  top: -15px;
+  right: -40px;
+}
+
+.services__experience-text {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  line-height: 35px;
+
+  span {
+    display: block;
+  }
+}
+
+.services__title {
+  font-size: 48px;
+  font-weight: 700;
+
+  line-height: 69px;
+  color: #fff;
+  margin-bottom: 37px;
+}
+
+.services__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 727px;
+  width: 100%;
+}
+
+.services__item {
+  max-width: 327px;
+  width: 100%;
+}
+.services__item-title {
+  font-size: 25px;
+  line-height: 69px;
+  color: #fff;
+}
+.services__item-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: $mainGrayColor;
+  margin-bottom: 15px
+}
+.services__item-more {
+  position: relative;
+  color: $textOrangeColor;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/main/arrow.png");
+    width: 12px;
+    height: 20px;
+    top: -2px;
+    right: -30px;
+  }
+}
+
+//services block end
 
 @keyframes fadeIn {
   from {
@@ -114,18 +206,20 @@
   }
 }
 
-@keyframes stretchOut{
+@keyframes stretchOut {
   from {
     width: 0;
   }
   to {
     width: 134px;
   }
-}@keyframes fromLeft{
+}
+
+@keyframes fromLeft {
   from {
     left: -9999px;
   }
   to {
-   left: -20px;
+    left: -30px;
   }
 }
