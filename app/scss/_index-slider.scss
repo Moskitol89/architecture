@@ -76,34 +76,6 @@
   margin: 24px 0;
 }
 
-//active slide animation
-.main-slider__slide.activated {
-  .main-slider__slide-name {
-    animation: fromLeft 0.5s 0s forwards;
-  }
-
-  .introduce__welcome {
-    animation: fadeIn 0.5s 0.5s forwards;
-  }
-
-  .introduce__title--first {
-    animation: fadeIn 0.5s 1s forwards;
-  }
-
-  .introduce__title--second {
-    animation: fadeIn 0.5s 1.5s forwards;
-  }
-
-  .introduce__title--third {
-    animation: fadeIn 0.5s 2s forwards;
-  }
-
-  .introduce__text-block {
-    &:after {
-      animation: stretchOut 1s 2.5s forwards;
-    }
-  }
-}
 
 //introduce block end
 //services block start
@@ -149,7 +121,7 @@
 .services__title {
   font-size: 48px;
   font-weight: 700;
-
+  opacity: 0;
   line-height: 69px;
   color: #fff;
   margin-bottom: 37px;
@@ -166,12 +138,20 @@
 .services__item {
   max-width: 327px;
   width: 100%;
+  margin-bottom: 35px;
+  &:hover .services__item-more {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
+
 .services__item-title {
   font-size: 25px;
   line-height: 69px;
   color: #fff;
 }
+
 .services__item-text {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -179,30 +159,103 @@
   color: $mainGrayColor;
   margin-bottom: 15px
 }
+
 .services__item-more {
-  position: relative;
+  transform: translateX(-135px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.75s;
+}
+
+.services__item-link {
   color: $textOrangeColor;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  &::after {
-    position: absolute;
+  position: relative;
+
+
+  &:after {
     content: "";
     background-image: url("../img/main/arrow.png");
+    position: absolute;
     width: 12px;
     height: 20px;
     top: -2px;
-    right: -30px;
+    right: -35px;
+    opacity: 1;
   }
 }
 
+.services__item.mouse-leave .services__item-link {
+  animation: fade 0.5s forwards;
+}
+
+.services__item.mouse-leave .services__item-arrow {
+  animation: fromRightForMoreLink 0.75s forwards;
+  animation-delay: 0.5s;
+  opacity: 1;
+}
+
+.services__item.mouse-enter .services__item-link {
+  animation: uprise 0.5s forwards;
+  animation-delay: 0.75s;
+}
+
+.services__item.mouse-enter .services__item-arrow {
+  animation: fromLeftForMoreLink 0.75s forwards;
+}
+
+
 //services block end
 
-@keyframes fadeIn {
+//active slide animation
+.main-slider__slide.activated {
+  .main-slider__slide-name {
+    animation: fromLeft 0.5s 0s forwards;
+  }
+
+  .introduce__welcome,
+  .services__title{
+    animation: uprise 0.5s 0.5s forwards;
+  }
+
+  .introduce__title--first {
+    animation: uprise 0.5s 1s forwards;
+  }
+
+  .introduce__title--second {
+    animation: uprise 0.5s 1.5s forwards;
+  }
+
+  .introduce__title--third {
+    animation: uprise 0.5s 2s forwards;
+  }
+
+  .introduce__text-block {
+    &:after {
+      animation: stretchOut 1s 2.5s forwards;
+    }
+  }
+
+  //second slide
+
+}
+
+@keyframes uprise {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
