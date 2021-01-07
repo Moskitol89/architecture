@@ -23,6 +23,13 @@ $(function () {
         }
     });
 
+    let indexWorksSlider = new Swiper(".works-slider__container", {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 });
 //years counter
 function countAnimation(htmlElement, maxNumber) {

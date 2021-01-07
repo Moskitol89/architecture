@@ -85,7 +85,7 @@
 
 .services__inner {
   max-width: 1110px;
-  margin: 300px auto 0;
+  margin: 300px 30px 0 400px;
   display: flex;
   justify-content: space-between;
 }
@@ -139,6 +139,7 @@
   max-width: 327px;
   width: 100%;
   margin-bottom: 35px;
+
   &:hover .services__item-more {
     visibility: visible;
     opacity: 1;
@@ -186,27 +187,20 @@
   }
 }
 
-.services__item.mouse-leave .services__item-link {
-  animation: fade 0.5s forwards;
-}
-
-.services__item.mouse-leave .services__item-arrow {
-  animation: fromRightForMoreLink 0.75s forwards;
-  animation-delay: 0.5s;
-  opacity: 1;
-}
-
-.services__item.mouse-enter .services__item-link {
-  animation: uprise 0.5s forwards;
-  animation-delay: 0.75s;
-}
-
-.services__item.mouse-enter .services__item-arrow {
-  animation: fromLeftForMoreLink 0.75s forwards;
-}
-
-
 //services block end
+//works block start
+.works-slider__wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.works-slider__slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//works block end
 
 //active slide animation
 .main-slider__slide.activated {
@@ -215,7 +209,7 @@
   }
 
   .introduce__welcome,
-  .services__title{
+  .services__title {
     animation: uprise 0.5s 0.5s forwards;
   }
 
