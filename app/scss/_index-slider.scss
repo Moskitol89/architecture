@@ -14,12 +14,14 @@
   position: absolute;
   top: 50px;
   text-transform: uppercase;
-  transform: rotate(270deg);
+  transform: rotate(-90deg);
+  font-size: 16px;
   color: #fff;
   left: -9999px;
   width: 110px;
   font-weight: 400;
   font-family: "Open sans", sans-serif;
+
 }
 
 //introduce block start
@@ -199,7 +201,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.slide-name--without-container {
+  z-index: 2;
+  top: 300px;
+  transition: all 0.5s;
+}
 //works block end
 
 //active slide animation
@@ -231,8 +237,10 @@
     }
   }
 
-  //second slide
-
+  .slide-name--without-container {
+    left: -30px;
+    animation: none;
+  }
 }
 
 @keyframes uprise {
