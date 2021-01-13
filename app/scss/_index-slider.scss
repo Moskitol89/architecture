@@ -206,6 +206,32 @@
   top: 300px;
   transition: all 0.5s;
 }
+.works-slider__slide-inner {
+  margin-top: 340px;
+}
+.works-slider__slide-text {
+  margin-left: 418px;
+  width: 100%;
+}
+.works-slider__slide-title {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 105px;
+  color: #fff;
+  margin-bottom: 58px;
+  & span{
+   display: block;
+  }
+}
+.works-slider__slide-description {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 65px;
+  max-width: 321px;
+  color: #ccc;
+}
+
 //works block end
 
 //active slide animation
