@@ -1,14 +1,17 @@
 let timer;
+let windowWidth =
 window.onresize = function () {
     clearTimeout(timer);
     timer = setTimeout(() => {
             calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"))
-            calcLeftForPagination(document.querySelector(".main-slider__pagination"));
+            calcRightForPagination(document.querySelector(".main-slider__pagination"));
+            calcLeftForFeaturedWorks(document.querySelector(".main-slider__featured-works"));
         }
         , 250)
 }
 window.onload = function () {
-    calcLeftForPagination(document.querySelector(".main-slider__pagination"));
+    calcRightForPagination(document.querySelector(".main-slider__pagination"));
+    calcLeftForFeaturedWorks(document.querySelector(".main-slider__featured-works"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
     direction: "vertical",
@@ -36,12 +39,24 @@ let indexMainSlider = new Swiper(".main-slider__container", {
 });
 
 let indexWorksSlider = new Swiper(".works-slider__container", {
+    loop: true,
+    autoplay: {
+        delay: 5000
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
 
+function calcLeftForFeaturedWorks(element) {
+    let windowWidth = window.innerWidth;
+    let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".works-slider__slide-text"))
+        .width.replaceAll("px", "");
+    console.log(windowWidth + " " + worksSlideTextBlockWidth);
+        element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
+
+}
 
 function calcLeftForSlideName(elements) {
     let windowWidth = window.innerWidth;
@@ -54,7 +69,7 @@ function calcLeftForSlideName(elements) {
     }
 }
 
-function calcLeftForPagination(element) {
+function calcRightForPagination(element) {
     let windowWidth = window.innerWidth;
     let containerWidth = window.getComputedStyle(document.querySelector(".container"))
         .width.replaceAll("px", "");
