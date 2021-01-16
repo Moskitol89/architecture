@@ -1,5 +1,5 @@
 let timer;
-let windowWidth =
+let windowWidth = window.innerWidth;
 window.onresize = function () {
     clearTimeout(timer);
     timer = setTimeout(() => {
@@ -49,8 +49,18 @@ let indexWorksSlider = new Swiper(".works-slider__container", {
     },
 });
 
+let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 62,
+    pagination: {
+        el: '.testimonials-slider__pagination',
+        clickable: true,
+    },
+});
+
 function calcLeftForFeaturedWorks(element) {
-    let windowWidth = window.innerWidth;
+   windowWidth = window.innerWidth;
     let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".works-slider__slide-text"))
         .width.replaceAll("px", "");
     console.log(windowWidth + " " + worksSlideTextBlockWidth);
@@ -59,7 +69,7 @@ function calcLeftForFeaturedWorks(element) {
 }
 
 function calcLeftForSlideName(elements) {
-    let windowWidth = window.innerWidth;
+   windowWidth = window.innerWidth;
     let containerWidth = window.getComputedStyle(document.querySelector(".container"))
         .width.replaceAll("px", "");
     if (containerWidth == windowWidth) {
@@ -70,7 +80,7 @@ function calcLeftForSlideName(elements) {
 }
 
 function calcRightForPagination(element) {
-    let windowWidth = window.innerWidth;
+   windowWidth = window.innerWidth;
     let containerWidth = window.getComputedStyle(document.querySelector(".container"))
         .width.replaceAll("px", "");
     if (containerWidth == windowWidth) {
