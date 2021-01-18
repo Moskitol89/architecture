@@ -5,13 +5,13 @@ window.onresize = function () {
     timer = setTimeout(() => {
             calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"))
             calcRightForPagination(document.querySelector(".main-slider__pagination"));
-            calcLeftForFeaturedWorks(document.querySelector(".main-slider__featured-works"));
+            calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
         }
         , 250)
 }
 window.onload = function () {
     calcRightForPagination(document.querySelector(".main-slider__pagination"));
-    calcLeftForFeaturedWorks(document.querySelector(".main-slider__featured-works"));
+    calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
     direction: "vertical",
@@ -38,7 +38,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
     }
 });
 
-let indexWorksSlider = new Swiper(".works-slider__container", {
+let indexInnerSlider = new Swiper(".inner-slider__container", {
     loop: true,
     autoplay: {
         delay: 5000
@@ -59,13 +59,13 @@ let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
     },
 });
 
-function calcLeftForFeaturedWorks(element) {
+function calcLeftForTitles(elements) {
    windowWidth = window.innerWidth;
-    let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".works-slider__slide-text"))
+    let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".inner-slider__slide-text"))
         .width.replaceAll("px", "");
-    console.log(windowWidth + " " + worksSlideTextBlockWidth);
-        element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
-
+        for(let element of elements) {
+            element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
+        }
 }
 
 function calcLeftForSlideName(elements) {

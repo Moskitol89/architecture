@@ -4,7 +4,7 @@
 }
 
 .main-slider__slide {
-  height: 100%;
+ width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -189,13 +189,13 @@
   }
 }
 //services block end
-//works block start
-.works-slider__wrapper {
+//inner block start
+.inner-slider__wrapper {
   height: 100vh;
   width: 100%;
 }
 
-.works-slider__slide {
+.inner-slider__slide {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,7 +205,7 @@
   top: 300px;
   transition: all 0.5s;
 }
-.main-slider__featured-works {
+.main-slider__title {
   position: absolute;
   left: 0;
   top: 270px;
@@ -220,13 +220,13 @@
   transition: all 0.5s;
   transition-delay: 0.5s;
 }
-.works-slider__slide-inner {
+.inner-slider__slide-inner {
   margin-top: 340px;
 }
-.works-slider__slide-text {
+.inner-slider__slide-text {
   margin-left: 404px;
 }
-.works-slider__slide-title {
+.inner-slider__slide-title {
   font-weight: 700;
   font-size: 90px;
   line-height: 105px;
@@ -237,7 +237,7 @@
    display: block;
   }
 }
-.works-slider__slide-description {
+.inner-slider__slide-description {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   line-height: 26px;
@@ -253,7 +253,7 @@
   left: 260px;
   color: #ffffff;
 }
-//works block end
+//inner block end
 //testimonials block start
 .testimonials__inner {
   max-width: 1112px;
@@ -339,6 +339,16 @@
   transition-delay: 1s;
 }
 //testimonials  block end
+//team block start
+.team__name {
+  span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 105px;
+  }
+}
+//team block end
 
 //active slide animation
 .main-slider__slide.activated {
@@ -373,7 +383,7 @@
     left: -30px;
     animation: none;
   }
-  .main-slider__featured-works,
+  .main-slider__title,
   .testimonials__title,
   .testimonials__clients{
     opacity: 1;
