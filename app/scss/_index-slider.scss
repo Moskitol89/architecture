@@ -170,24 +170,6 @@
   transition: all 0.75s;
 }
 
-.services__item-link {
-  color: $textOrangeColor;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
-  position: relative;
-
-
-  &:after {
-    content: "";
-    background-image: url("../img/main/arrow.png");
-    position: absolute;
-    width: 12px;
-    height: 20px;
-    top: -2px;
-    right: -35px;
-    opacity: 1;
-  }
-}
 
 //services block end
 //inner block start
@@ -391,6 +373,94 @@
 }
 
 //team block end
+//news block start
+.news__inner {
+  color: #fff;
+  max-width: 1105px;
+  margin: 230px auto 0;
+}
+
+.news__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.news__title {
+  font-size: 48px;
+  line-height: 69px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+.news__more {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  margin-right: 35px;
+  color: #a1a1a1;
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 1s;
+  &:after {
+    top: 0;
+    filter: grayscale(100%);
+  }
+}
+.news__items {
+  display: flex;
+  justify-content: space-between;
+
+}
+.news__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 478px;
+  max-width: 350px;
+  width: 100%;
+  &:hover .news__item-content{
+    opacity: 1;
+  }
+}
+.news__item-content {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #272727;
+  border: 4px solid #FBC710;
+  padding: 40px 35px 35px;
+  transition: all 0.75s;
+}
+.news__item-date {
+  font-family: "Work Sans", sans-serif;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.news__item-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 28px;
+}
+.news__item-text {
+  color: $mainGrayColor;
+  font-family: "Work Sans", sans-serif;
+  line-height: 26px;
+  max-height: 260px;
+  overflow-y: hidden;
+}
+.news__item-link {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+}
+//news block end
 
 //active slide animation
 .main-slider__slide.activated {
@@ -428,9 +498,12 @@
 
   .main-slider__title,
   .testimonials__title,
-  .testimonials__clients {
+  .testimonials__clients,
+  .news__title,
+  .news__more{
     opacity: 1;
   }
+
 }
 
 @keyframes uprise {

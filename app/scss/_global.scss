@@ -65,3 +65,24 @@ body {
 .swiper-slide--dark {
   background-color: #272727;
 }
+//links with arrow
+.services__item-link,
+.news__item-link,
+.news__more{
+  color: $textOrangeColor;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  position: relative;
+
+  &:after {
+    content: "";
+    background-image: url("../img/main/arrow.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 21px;
+    top: -2px;
+    right: -35px;
+    opacity: 1;
+  }
+}

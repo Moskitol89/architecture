@@ -41,7 +41,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
 let indexInnerSlider = new Swiper(".inner-slider__container", {
     loop: true,
     autoplay: {
-        delay: 5000
+        delay: 7000
     },
     navigation: {
         nextEl: '.swiper-button-next',
