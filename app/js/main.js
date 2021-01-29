@@ -14,6 +14,7 @@ window.onload = function () {
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
+    roundLengths: true,
     direction: "vertical",
     mousewheel: true,
     pagination: {
@@ -33,7 +34,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
                 countAnimation(yearsCount, 11);
             }
             slide.classList.add("activated");
-            calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"))
+            calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"));
         }
     }
 });
@@ -48,6 +49,7 @@ let indexInnerSlider = new Swiper(".inner-slider__container", {
         prevEl: '.swiper-button-prev',
     },
 });
+
 
 let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
     slidesPerView: 2,

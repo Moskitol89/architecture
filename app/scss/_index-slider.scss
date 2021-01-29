@@ -173,7 +173,7 @@
 
 //services block end
 //inner block start
-.inner-slider__wrapper {
+.inner-slider__container {
   height: 100vh;
   width: 100%;
 }
@@ -441,6 +441,13 @@
   font-family: "Work Sans", sans-serif;
   line-height: 26px;
   margin-bottom: 20px;
+}
+.mew {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  font-size: 80px;
 }
 .news__item-title {
   font-weight: 700;
