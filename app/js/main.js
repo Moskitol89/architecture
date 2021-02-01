@@ -1,3 +1,4 @@
+
 let timer;
 let windowWidth = window.innerWidth;
 window.onresize = function () {
@@ -14,7 +15,8 @@ window.onload = function () {
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
-    roundLengths: true,
+
+    simulateTouch: false,
     direction: "vertical",
     mousewheel: true,
     pagination: {
@@ -23,7 +25,6 @@ let indexMainSlider = new Swiper(".main-slider__container", {
     },
     scrollbar: {
         el: '.swiper-scrollbar',
-        hide: true,
     },
     on: {
         slideChangeTransitionStart: function () {
