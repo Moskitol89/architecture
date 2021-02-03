@@ -18,7 +18,7 @@
   transform: rotate(-90deg);
   font-size: 16px;
   color: #fff;
-  left: -9999px;
+  left: -999px;
   width: 110px;
   font-weight: 400;
   font-family: "Open sans", sans-serif;
@@ -64,6 +64,7 @@
 
 .swiper-pagination-bullet {
   background-color: #fff;
+  outline: none;
   opacity: 1;
 }
 
@@ -180,6 +181,7 @@
 }
 
 .inner-slider__slide {
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -469,6 +471,103 @@
   left: 35px;
 }
 //news block end
+//contacts block end
+.contacts__inner {
+  margin: 270px auto 0;
+  max-width: 1130px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.contacts__contact{
+  max-width: 400px;
+  width: 100%;
+}
+.contacts__title {
+  opacity: 0;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 105px;
+  margin-bottom: 25px;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.contacts__subtitle {
+  font-family: "Work Sans", sans-serif;
+  line-height: 26px;
+  color: #ccc;
+  margin-bottom: 55px;
+}
+.contacts__address {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 55px;
+}
+.contacts__tel {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.contacts__email {
+  font-family: "Work Sans", sans-serif;
+  line-height: 26px;
+  color: #ccc;
+}
+.contacts__form-block {
+  max-width: 545px;
+}
+.contacts__form-text {
+  opacity: 0;
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  transition: all 0.5s;
+  transition-delay: 1s;
+  &--orange{
+    color: $mainOrangeColor;
+  }
+}
+.contacts__form-name,
+.contacts__form-email,
+.contacts__form-message {
+  padding-left: 20px ;
+  padding-right: 20px;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  &::placeholder{
+    color: #fff;
+  }
+}
+.contacts__form-name,
+.contacts__form-email{
+  height: 55px;
+  margin-bottom: 30px;
+}
+.contacts__form-message {
+  resize: none;
+  height: 140px;
+
+  margin-bottom: 35px;
+}
+.contacts__btn {
+  background-color: $mainOrangeColor;
+  max-width: 195px;
+  width: 100%;
+  height: 52px;
+  border: none;
+  color: #fff;
+}
+//contacts block start
 
 //active slide animation
 .main-slider__slide.activated {
@@ -508,7 +607,9 @@
   .testimonials__title,
   .testimonials__clients,
   .news__title,
-  .news__more{
+  .news__more,
+  .contacts__title,
+  .contacts__form-text{
     opacity: 1;
   }
 
