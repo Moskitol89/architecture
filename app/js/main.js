@@ -25,6 +25,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
     },
     scrollbar: {
         el: '.swiper-scrollbar',
+        draggable: true
     },
     on: {
         slideChangeTransitionStart: function () {
@@ -100,6 +101,7 @@ function countAnimation(htmlElement, maxNumber) {
         htmlElement.textContent = start;
         if (start === maxNumber) {
             clearInterval(intervalId);
+            document.querySelector(".services__count-plus").classList.add("count-done");
         }
         start++;
     }, 100);

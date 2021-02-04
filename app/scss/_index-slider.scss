@@ -105,10 +105,16 @@
 }
 
 .services__count-plus {
+  opacity: 0;
   position: absolute;
   font-size: 80px;
   top: -15px;
   right: -40px;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+  &.count-done {
+    opacity: 1;
+  }
 }
 
 .services__experience-text {
@@ -320,6 +326,8 @@
 }
 
 .testimonials-slider__slide-text {
+  height: 80px;
+  overflow-y: hidden;
   color: $mainGrayColor;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
@@ -426,6 +434,7 @@
   height: 478px;
   max-width: 350px;
   width: 100%;
+  overflow-y: hidden;
   &:hover .news__item-content{
     opacity: 1;
   }
