@@ -1,0 +1,16 @@
+@media (max-width: 1120px) {
+  .header__nav {
+    display: none;
+  }
+  .header__btn-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__social {
+    display: none;
+  }
+}

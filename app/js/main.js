@@ -1,4 +1,3 @@
-
 let timer;
 let windowWidth = window.innerWidth;
 window.onresize = function () {
@@ -15,8 +14,7 @@ window.onload = function () {
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
-
-    simulateTouch: false,
+    // simulateTouch: false,
     direction: "vertical",
     mousewheel: true,
     pagination: {
@@ -64,16 +62,16 @@ let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
 });
 
 function calcLeftForTitles(elements) {
-   windowWidth = window.innerWidth;
+    windowWidth = window.innerWidth;
     let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".inner-slider__slide-text"))
         .width.replaceAll("px", "");
-        for(let element of elements) {
-            element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
-        }
+    for (let element of elements) {
+        element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
+    }
 }
 
 function calcLeftForSlideName(elements) {
-   windowWidth = window.innerWidth;
+    windowWidth = window.innerWidth;
     let containerWidth = window.getComputedStyle(document.querySelector(".container"))
         .width.replaceAll("px", "");
     if (containerWidth == windowWidth) {
@@ -84,7 +82,7 @@ function calcLeftForSlideName(elements) {
 }
 
 function calcRightForPagination(element) {
-   windowWidth = window.innerWidth;
+    windowWidth = window.innerWidth;
     let containerWidth = window.getComputedStyle(document.querySelector(".container"))
         .width.replaceAll("px", "");
     if (containerWidth == windowWidth) {
@@ -106,3 +104,14 @@ function countAnimation(htmlElement, maxNumber) {
         start++;
     }, 100);
 }
+
+//menu button animation
+document.querySelector(".header__btn-menu").addEventListener("click", function () {
+    if (this.classList.contains("clicked")) {
+        this.classList.remove("clicked");
+        document.querySelector(".header__nav").classList.remove("show");
+    } else {
+        this.classList.add("clicked");
+        document.querySelector(".header__nav").classList.add("show");
+    }
+});
