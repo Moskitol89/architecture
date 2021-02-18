@@ -14,29 +14,6 @@
   margin-right: auto;
   margin-left: 270px;
 }
-.header__nav.show {
-  position: absolute;
-  display: block;
-  top: 92px;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 9999;
-  .header__links li{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 50px;
-    border-bottom: 1px solid $mainGrayColor;
-    &:first-child{
-      border-top: 1px solid $mainGrayColor;
-    }
-    a{
-      width: 100%;
-      text-align: center;
-    }
-  }
-}
 
 .header__links {
   font-family: "Gilroy", sans-serif;

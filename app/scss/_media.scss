@@ -1,6 +1,44 @@
 @media (max-width: 1120px) {
+  .header {
+    top: 0;
+    padding: 11px 0;
+    transition: background-color 1s;
+  }
+  .header.btn-clicked {
+    background-color: #272727;
+  }
   .header__nav {
-    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 9999;
+    .header__links li{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      height: 50px;
+      border-bottom: 1px solid $mainGrayColor;
+      &:first-child{
+        border-top: 1px solid $mainGrayColor;
+      }
+      a{
+        height: 100%;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+  }
+  .header__links {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s, background-color 1s;
+  }
+  .header__nav.show .header__links{
+    background-color: #272727;
+    transform: scaleY(1);
   }
   .header__btn-menu {
     display: flex;
