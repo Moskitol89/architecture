@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+@@include("_header.html")
+
+<main class="main" id="fullpage">
+    <div class="main-slider__slide activated introduce section"
+         style="background-image: url(img/main/first-main-slide-bg.jpg)">
+        <div class="container">
+            <h4 class="main-slider__slide-name">знакомство</h4>
+            <div class="introduce__text-block">
+                <h4 class="introduce__welcome">Добро пожаловать в Larson</h4>
+                <h1 class="introduce__title">
+                    <span class="introduce__title--first">Студия</span>
+                    <span class="introduce__title--orange introduce__title--second title--orange">Интерьера</span>
+                    <span class="introduce__title--third">Larson</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__slide services swiper-slide--dark section">
+        <div class="container">
+            <h4 class="main-slider__slide-name">услуги</h4>
+            <div class="services__inner">
+                <div class="services__experience">
+                    <div class="services__count">
+                        <span class="services__count-number">0</span>
+                        <span class="services__count-plus">+</span>
+                    </div>
+                    <div class="services__experience-text">
+                        <span>лет</span><span>опыт</span><span>работы</span>
+                    </div>
+                </div>
+                <div class="services__services-block">
+                    <h2 class="services__title">Мы используем
+                        <span class="services__title--orange title--orange">лучший</span>
+                        дизайн
+                    </h2>
+                    <div class="services__items">
+                        <div class="services__item">
+                            <h3 class="services__item-title">Архитектура</h3>
+                            <p class="services__item-text">Начиная с 2009 года мы профессионально
+                                занимаемся архитектурным проектированием жилых и общественных зданий.
+                            </p>
+                            <a class="services__item-more" href="#">
+                                <span class="services__item-link">Узнать больше </span>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <h3 class="services__item-title">Интерьер</h3>
+                            <p class="services__item-text">С помощью интерьера помещений мы обеспечим удобство
+                                и эстетическое удовольствие от пребывания в вашем доме.
+                            </p>
+                            <a class="services__item-more" href="#">
+                                <span class="services__item-link">Узнать больше </span>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <h3 class="services__item-title">Ландшафтный дизайн</h3>
+                            <p class="services__item-text">
+                                Мы поможем вам организовать устройство придомовой
+                                территории по вашему вкусу, придадим индивидуальный характер вашему
+                                дому, который будет создавать вам настроение каждый день.
+
+                            </p>
+                            <a class="services__item-more" href="#">
+                                <span class="services__item-link">Узнать больше </span>
+                            </a>
+                        </div>
+                        <div class="services__item">
+                            <h3 class="services__item-title">Строительство</h3>
+                            <p class="services__item-text">Вы можете заказать у нас постройку дома под ключ
+                                или воспользоваться только услугами профессиональных строителей по вашим
+                                проектам.
+                            </p>
+                            <a class="services__item-more" href="#">
+                                <span class="services__item-link">Узнать больше </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__slide works section">
+        <h4 class="main-slider__slide-name slide-name--without-container">проекты</h4>
+        <h3 class="main-slider__featured-works main-slider__title">Наши работы</h3>
+        <!-- Slider main container -->
+        <div class="inner-slider__container swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="inner-slider__wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/works/slide-1.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title">Загородный <span>Интерьер</span></h2>
+                            <p class="inner-slider__slide-description">Проект для загородных домов с открытой
+                                территорией.
+                                Сочетает в себе открытый кантри стиль с соверменным нью-модерном.
+                            </p>
+                            <a class="inner-slider__slide-link link" href="#">проект</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/works/slide-2.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title">Американский<span>Стиль</span></h2>
+                            <p class="inner-slider__slide-description">Проект жилого дома в классическом
+                                западном стиле.
+                                Сочетает в себе комфорт и уют, а так же личное пространство для каждого члена
+                                большой семьи.
+
+                            </p>
+                            <a class="inner-slider__slide-link link" href="#">проект</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/works/slide-3.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title">Современный <span>Минимализм</span></h2>
+                            <p class="inner-slider__slide-description">Проект внутреннего дизайна жилого
+                                помещения
+                                основанный на концепции "ничего лишнего".
+                            </p>
+                            <a class="works-slider__slide-link link" href="#">проект</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="main-slider__slide swiper-slide--dark testimonials section">
+        <div class="container">
+            <h4 class="main-slider__slide-name">о нас</h4>
+            <div class="testimonials__inner">
+                <h3 class="testimonials__title">Отзывы</h3>
+                <!-- Slider main container -->
+                <div class="testimonials-slider__container swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="testimonials-slider__wrapper swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-1.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Владимир</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Дизайнер в <a class="testimonials-slider__slide-link" href="#">vk.com</a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">Сотрудничество с динайнерами интерьера
+                                студии Larson было невероятно легким и удобным! В крачайшие сроки нам был предоставлен
+                                проект внутренней отделки и интерьера.
+                            </p>
+                        </div>
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-5.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Елена</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Домохозяйка<a class="testimonials-slider__slide-link" href="#"></a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">Большое спасибо Larson, особенно ландшафтным дизайнерам,
+                                за преобразование территории в настоящий сказочный сад!
+                            </p>
+                        </div>
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-2.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Анастасия</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Фрилансер<a class="testimonials-slider__slide-link" href="#"></a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">Воспользовалась услугами студии для внутреннего оформления новой квартиры.
+                                Результат просто впечатляет, а сколько сэкономленного времени и нервов! Спасибо!
+                            </p>
+                        </div>
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-4.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Ольга</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Маркетолог<a class="testimonials-slider__slide-link" href="#"></a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">Давно мечтала сделать ремонт в квартире, доставшейся по
+                                наследству, родители порекомендовали обратиться к профессионалам, выбрали Larson и не прогадали.
+                            </p>
+                        </div>
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-3.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Михаил</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Бизнесмен<a class="testimonials-slider__slide-link" href="#"></a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">Заказал строительство загородного дома под ключ. Мое участие было
+                                минимальным, а результат именно таким какой я хотел, это говорит о высоком профессионализме.
+                            </p>
+                        </div>
+                        <div class="testimonials-slider__slide swiper-slide">
+                            <img src="img/main/testimonials/avatar-6.jpg" alt="avatar"
+                                 class="testimonials-slider__slide-avatar">
+                            <div class="testimonials-slider__slide-quotes">”</div>
+                            <h4 class="testimonials-slider__slide-username">Евгений</h4>
+                            <p class="testimonials-slider__slide-profession">
+                                Архитектор<a class="testimonials-slider__slide-link" href="#"></a>
+                            </p>
+                            <p class="testimonials-slider__slide-text">
+                                Искал сильную команду дизайнеров под свой проект. Понравился подход и качество работы, с удовольствием
+                                буду сотрудничать в дальнейшем.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="testimonials-slider__pagination"></div>
+                </div>
+                <div class="testimonials__clients">
+                    <img src="img/main/testimonials/client-1.png" alt="client" class="testimonials__client">
+                    <img src="img/main/testimonials/client-2.png" alt="client" class="testimonials__client">
+                    <img src="img/main/testimonials/client-3.png" alt="client" class="testimonials__client">
+                    <img src="img/main/testimonials/client-4.png" alt="client" class="testimonials__client">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__slide  team section">
+        <h4 class="main-slider__slide-name slide-name--without-container">Команда</h4>
+        <h3 class="main-slider__team main-slider__title">Лучшая команда</h3>
+        <div class="inner-slider__container swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="inner-slider__wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/team/team-7.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title team__name">Алексей <span>/дизайнер</span></h2>
+                            <p class="inner-slider__slide-description">Алексей Ковалёв - наш дизайнер внутренней
+                                отделки жилых помещений. Работает в компании более 6 лет. Имеет репутацию
+                                надежного сотрудника
+                                и приятного человека!
+                            </p>
+                            <ul class="team__social">
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/team/team-5.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title team__name">Ярослав <span>/архитектор</span>
+                            </h2>
+                            <p class="inner-slider__slide-description">Ярослав Синицин - архитектор, занимается
+                                архитектурой как жилых так и нежилых помещений. Уверенный профессионал на
+                                которого можно положиться.
+                            </p>
+                            <ul class="team__social">
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-slider__slide swiper-slide"
+                     style="background-image: url(img/main/team/team-6.jpg)">
+                    <div class="inner-slider__slide-inner">
+                        <div class="inner-slider__slide-text">
+                            <h2 class="inner-slider__slide-title team__name">Мураб <span>/строитель</span></h2>
+                            <p class="inner-slider__slide-description">Мураб имеет высшее строительное
+                                образование, как и все наши сотрудники
+                                отдела строительства, имеет за плечами десятки успешно завершенных проектов без
+                                каких либо нареканий.
+                            </p>
+                            <ul class="team__social">
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team__social-link ion-social-instagram"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="main-slider__slide swiper-slide--dark news section">
+        <div class="container">
+            <h4 class="main-slider__slide-name">Новости</h4>
+            <div class="news__inner">
+                <div class="news__title-block">
+                    <h2 class="news__title">Последние новости</h2>
+                    <a href="#" class="news__more">Все новости</a>
+                </div>
+                <div class="news__items">
+                    <div class="news__item" style="background-image: url(img/main/news/news-prev-1.jpg)">
+                        <div class="news__item-content">
+                            <h6 class="news__item-date">январь 21, 2021</h6>
+                            <h4 class="news__item-title">Смело и лаконично</h4>
+                            <p class="news__item-text">Минимализм возвращается, но с новыми трендами!
+                                Дизайнер из Нидерланд на выставке внутреннего интерьера в Мюнхене представил
+                                обновленную и современную концепцию минимализма. Добавив немало смелых дизайнерских решений
+                                ему удалось привлечь внимание публики.</p>
+                            <a href="#" class="news__item-link">Читать</a>
+                        </div>
+                    </div>
+                    <div class="news__item" style="background-image: url(img/main/news/news-prev-2.jpg)">
+                        <div class="news__item-content">
+                            <h6 class="news__item-date">январь 14, 2021</h6>
+                            <h4 class="news__item-title">Скандинавский шик</h4>
+                            <p class="news__item-text">Свежий взгляд молодого финского дизайнера-архитектора
+                                на скромный скандинавский стиль. Как соединить шик и скромность, но что бы не пострадал комфорт? На эти
+                                вопросы пытается ответить Хенрих в своих размышлениях.</p>
+                            <a href="#" class="news__item-link">Читать</a>
+                        </div>
+                    </div>
+                    <div class="news__item" style="background-image: url(img/main/news/news-prev-3.jpg)">
+                        <div class="news__item-content">
+                            <h6 class="news__item-date">январь 11, 2021</h6>
+                            <h4 class="news__item-title">Уютная классика</h4>
+                            <p class="news__item-text">Вечная европейская классика глазами фотографа-дизайнера.
+                                Знаменитый польский фотограф делится своими работами и мыслями.</p>
+                            <a href="#" class="news__item-link">Читать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-slider__slide contacts section" style="background-image: url(img/main/contacts-bg.jpg)">
+        <div class="container">
+            <h4 class="main-slider__slide-name">контакты</h4>
+            <div class="contacts__inner">
+                <div class="contacts__contact">
+                    <h2 class="contacts__title">
+                        Наши контакты
+                    </h2>
+                    <p class="contacts__subtitle">Приходите к нам лично или позвоните если вам так удобно!</p>
+                    <p class="contacts__address">Москва, улица Карла Маркса 69</p>
+                    <a href="tel:+790689805712" class="contacts__tel">+7 (906) 898-07512</a>
+                    <a href="mailto:larson@mail.ru" class="contacts__email">larson@mail.ru</a>
+                </div>
+                <div class="contacts__form-block">
+                    <div class="contacts__form-text">Возьмите чашечку горячего кофе и приготовьтесь к<span class="contacts__form-text--orange"> переписке с нами.</span></div>
+                    <form class="contacts__form" action="">
+                        <input class="contacts__form-name" type="text" placeholder="Ваше имя">
+                        <input class="contacts__form-email" type="text" placeholder="Электронная почта">
+                        <textarea class="contacts__form-message" placeholder="Сообщение"></textarea>
+                        <button class="contacts__btn">Оправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>

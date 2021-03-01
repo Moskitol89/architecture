@@ -3,18 +3,28 @@ let windowWidth = window.innerWidth;
 window.onresize = function () {
     clearTimeout(timer);
     timer = setTimeout(() => {
+            windowWidth = window.innerWidth;
             calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"))
             calcRightForPagination(document.querySelector(".main-slider__pagination"));
             calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
+            if (windowWidth <= 1120) {
+                indexPageAdaptive(true);
+            }
         }
         , 250)
 }
 window.onload = function () {
     calcRightForPagination(document.querySelector(".main-slider__pagination"));
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
+    if(windowWidth <= 1120) {
+        indexPageAdaptive(true);
+    }
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
     // simulateTouch: false,
+    // setWrapperSize: true,
+    freeMode: true,
+    // autoHeight: true,
     direction: "vertical",
     mousewheel: true,
     pagination: {
@@ -25,16 +35,24 @@ let indexMainSlider = new Swiper(".main-slider__container", {
         el: '.swiper-scrollbar',
         draggable: true
     },
+    breakpoints: {
+      1200: {
+          freeMode: false,
+          autoHeight: false,
+      }
+    },
     on: {
-        slideChangeTransitionStart: function () {
-            let slide;
-            slide = document.querySelector(".main-slider__slide.swiper-slide-active");
-            let yearsCount = slide.querySelector(".services__count-number");
-            if (yearsCount && !slide.classList.contains("activated")) {
-                countAnimation(yearsCount, 11);
-            }
-            slide.classList.add("activated");
-            calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"));
+        activeIndexChange: function () {
+            setTimeout(()=> {
+                let slide;
+                slide = document.querySelector(".main-slider__slide.swiper-slide-active");
+                let yearsCount = slide.querySelector(".services__count-number");
+                if (yearsCount && !slide.classList.contains("activated")) {
+                    countAnimation(yearsCount, 11);
+                }
+                slide.classList.add("activated");
+                calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"));
+            },50);
         }
     }
 });
@@ -117,3 +135,10 @@ document.querySelector(".header__btn-menu").addEventListener("click", function (
         document.querySelector(".header__nav").classList.add("show");
     }
 });
+//override in-line height for swiper slides
+function indexPageAdaptive(windowSizeLessThan1120) {
+    if(windowSizeLessThan1120){
+        document.querySelectorAll(".swiper-slide--autoheight")
+            .forEach(el => el.style.height = "auto");
+    }
+}

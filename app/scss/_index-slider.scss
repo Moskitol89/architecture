@@ -2,8 +2,11 @@
   height: 100vh;
   width: 100%;
 }
-
+.fp-section.fp-table, .fp-slide.fp-table {
+  overflow: hidden;
+}
 .main-slider__slide {
+  height: 100vh;
   overflow: hidden;
   width: 100%;
   background-size: cover;
@@ -187,6 +190,7 @@
 }
 
 .inner-slider__slide {
+  height: 100vh;
   overflow: hidden;
   background-size: cover;
   background-position: center;
