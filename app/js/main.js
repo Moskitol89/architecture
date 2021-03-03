@@ -21,7 +21,7 @@ window.onload = function () {
     }
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
-    // simulateTouch: false,
+    simulateTouch: false,
     // setWrapperSize: true,
     freeMode: true,
     // autoHeight: true,
@@ -38,8 +38,11 @@ let indexMainSlider = new Swiper(".main-slider__container", {
     breakpoints: {
       1200: {
           freeMode: false,
-          autoHeight: false,
-      }
+          // autoHeight: false,
+      },
+        700: {
+
+        }
     },
     on: {
         activeIndexChange: function () {
@@ -70,21 +73,26 @@ let indexInnerSlider = new Swiper(".inner-slider__container", {
 
 
 let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 62,
     pagination: {
         el: '.testimonials-slider__pagination',
         clickable: true,
     },
+    breakpoints: {
+        900: {
+            slidesPerView: 2,
+            slidesPerGroup: 2
+        }
+    }
 });
 
 function calcLeftForTitles(elements) {
     windowWidth = window.innerWidth;
-    let worksSlideTextBlockWidth = window.getComputedStyle(document.querySelector(".inner-slider__slide-text"))
-        .width.replaceAll("px", "");
+    let leftDistanceToBlock = document.querySelector(".inner-slider__slide-text").offsetLeft;
     for (let element of elements) {
-        element.style.left = (windowWidth - worksSlideTextBlockWidth) + 1 + "px";
+        element.style.left = (leftDistanceToBlock) + 1 + "px";
     }
 }
 
