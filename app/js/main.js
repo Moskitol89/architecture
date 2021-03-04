@@ -7,24 +7,17 @@ window.onresize = function () {
             calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"))
             calcRightForPagination(document.querySelector(".main-slider__pagination"));
             calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
-            if (windowWidth <= 1120) {
-                indexPageAdaptive(true);
-            }
         }
         , 250)
 }
 window.onload = function () {
     calcRightForPagination(document.querySelector(".main-slider__pagination"));
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
-    if(windowWidth <= 1120) {
-        indexPageAdaptive(true);
-    }
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
+    slidesPerView: 'auto',
     simulateTouch: false,
-    // setWrapperSize: true,
     freeMode: true,
-    // autoHeight: true,
     direction: "vertical",
     mousewheel: true,
     pagination: {
@@ -38,11 +31,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
     breakpoints: {
       1200: {
           freeMode: false,
-          // autoHeight: false,
-      },
-        700: {
-
-        }
+      }
     },
     on: {
         activeIndexChange: function () {
@@ -56,7 +45,7 @@ let indexMainSlider = new Swiper(".main-slider__container", {
                 slide.classList.add("activated");
                 calcLeftForSlideName(document.querySelectorAll(".main-slider__slide.activated .slide-name--without-container"));
             },50);
-        }
+        },
     }
 });
 
@@ -76,6 +65,7 @@ let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 62,
+    autoHeight: true,
     pagination: {
         el: '.testimonials-slider__pagination',
         clickable: true,
@@ -84,6 +74,10 @@ let indexTestimonialsSlider = new Swiper(".testimonials-slider__container", {
         900: {
             slidesPerView: 2,
             slidesPerGroup: 2
+        },
+        1200: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         }
     }
 });
@@ -143,10 +137,3 @@ document.querySelector(".header__btn-menu").addEventListener("click", function (
         document.querySelector(".header__nav").classList.add("show");
     }
 });
-//override in-line height for swiper slides
-function indexPageAdaptive(windowSizeLessThan1120) {
-    if(windowSizeLessThan1120){
-        document.querySelectorAll(".swiper-slide--autoheight")
-            .forEach(el => el.style.height = "auto");
-    }
-}

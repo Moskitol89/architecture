@@ -4,7 +4,6 @@
     max-width: 950px;
   }
   .swiper-container {
-    overflow-y: auto;
   }
 }
 
@@ -13,21 +12,38 @@
     right: 130px;
   }
 }
+
 @media (max-width: 1200px) {
   .news__inner {
     max-width: 800px;
   }
   .news__items {
     flex-wrap: wrap;
-    //place-content: center;
+    place-content: center;
   }
   .news__item {
     margin-right: 10px;
     margin-bottom: 30px;
   }
+  .contacts__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-slider__slide {
+    height: auto;
+  }
+  .introduce,
+  .contacts{
+    padding-bottom: 150px;
+  }
+  .testimonials {
+    padding-bottom: 50px;
+  }
+
 }
 
 @media (max-width: 1120px) {
+
   .header {
     top: 0;
     padding: 11px 0;
@@ -81,6 +97,7 @@
     justify-content: space-between;
     flex-direction: column;
   }
+
   .introduce__text-block {
     margin-left: auto;
     margin-right: auto;
@@ -117,18 +134,25 @@
   }
   .testimonials__title {
     text-align: center;
-}
+  }
   .main-slider__slide-name {
     top: 85px;
+  }
+.testimonials__slide-name {
+  top: 45px;
+}
+}
+
+@media (max-width: 729px) {
+  .news__item {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 700px) {
   .main-slider__container {
   }
-  .main-slider__slide {
-    height: auto;
-  }
+
   .introduce__text-block {
     margin-top: 50%;
   }
@@ -169,7 +193,7 @@
     line-height: 25px;
   }
   .main-slider__featured-works,
-  .main-slider__team{
+  .main-slider__team {
     font-size: 18px;
   }
   .inner-slider__slide-title {
@@ -193,14 +217,15 @@
   .testimonials__inner {
     margin-top: 85px;
   }
-  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 8px;
     width: 10px;
     height: 10px;
   }
   .testimonials__clients {
     flex-wrap: wrap;
-    img{
+
+    img {
       margin-bottom: 10px;
     }
   }
@@ -221,10 +246,23 @@
   .news__title {
     margin-bottom: 30px;
   }
+  .contacts__inner {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .contacts__slide-name {
+    top: 125px;
+  }
 }
 
 @media (max-width: 420px) {
   .header__social {
+    display: none;
+  }
+  .news__item-text {
+    line-height: 22px;
+  }
+  .main-slider__slide-name {
     display: none;
   }
 }
