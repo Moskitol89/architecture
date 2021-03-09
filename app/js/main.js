@@ -15,6 +15,8 @@ window.onload = function () {
     calcLeftForTitles(document.querySelectorAll(".main-slider__title"));
 }
 let indexMainSlider = new Swiper(".main-slider__container", {
+    observer: true,
+    observeParents: true,
     slidesPerView: 'auto',
     simulateTouch: false,
     freeMode: true,

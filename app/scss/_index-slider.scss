@@ -185,12 +185,15 @@
 //services block end
 //inner block start
 .inner-slider__container {
+
   height: 100vh;
   width: 100%;
 }
-
+.inner-slider__wrapper {
+  z-index: -1;
+}
 .inner-slider__slide {
-  height: 100vh;
+z-index: -1;
   overflow: hidden;
   background-size: cover;
   background-position: center;
