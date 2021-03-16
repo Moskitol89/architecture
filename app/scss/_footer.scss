@@ -1,0 +1,31 @@
+.footer {
+  background-color: $mainDarkColor;
+  color: $mainGrayColor;
+  font-family: "Work Sans", sans-serif;
+}
+.footer__inner {
+  padding: 150px 0;
+  border-top: 1px solid $mainGrayColor;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__item {
+  max-width: 160px;
+}
+.footer__rights {
+  line-height: 26px;
+}
+.footer__links {
+  li {
+    display: block;
+  }
+}
+
+.footer__link {
+  color: $mainGrayColor;
+  font-size: 16px;
+  line-height: 26px;
+}

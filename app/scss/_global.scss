@@ -48,6 +48,19 @@ body {
   font-family: Gilroy, sans-serif;
   overflow-x: hidden;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
 .title--orange {
   color: $textOrangeColor;
 }
@@ -66,7 +79,7 @@ body {
   color: #ffffff;
 }
 .swiper-slide--dark {
-  background-color: #272727;
+  background-color: $mainDarkColor;
 }
 //links with arrow
 .services__item-link,
@@ -87,5 +100,17 @@ body {
     top: -2px;
     right: -35px;
     opacity: 1;
+  }
+}
+.social li:not(:last-child) {
+  margin-right: 25px;
+}
+.social-link {
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  transition: color .5s;
+  &:hover {
+    color: $mainOrangeColor;
   }
 }

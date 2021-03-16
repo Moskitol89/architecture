@@ -36,18 +36,7 @@
     color: $mainOrangeColor;
   }
 }
-.header__social li:not(:last-child) {
-  margin-right: 25px;
-}
-.header__social-link {
-  color: #fff;
-  font-size: 20px;
-  line-height: 26px;
-  transition: color .5s;
-  &:hover {
-    color: $mainOrangeColor;
-  }
-}
+
 .header__btn-menu {
   display: none;
   background-color: transparent;
