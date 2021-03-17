@@ -36,6 +36,12 @@ p {
   margin: 0 auto;
   padding: 0 15px;
 }
+.inner__container {
+  max-width: 1115px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 .swiper-wrapper {
   box-sizing: border-box;
 }
@@ -52,6 +58,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: $mainDarkColor;
+  color: #fff;
 }
 
 .content {
