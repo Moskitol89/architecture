@@ -21,11 +21,13 @@
 .footer__links {
   li {
     display: block;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
 .footer__link {
   color: $mainGrayColor;
-  font-size: 16px;
-  line-height: 26px;
+  line-height: 20px;
 }

@@ -2,6 +2,7 @@
   margin-top: 240px;
 }
 .greeting__title {
+  text-align: center;
   font-weight: 700;
   line-height: 75px;
   font-size: 60px;
@@ -13,6 +14,7 @@
 }
 .greeting__img {
   max-width: 1800px;
+  width: 100%;
   max-height: 768px;
   display: block;
   margin: 0 auto;
@@ -44,7 +46,8 @@
   font-weight: 700;
   font-size: 38px;
   line-height: 50px;
-  max-width: 275px;
+  max-width: fit-content;
+  margin-bottom: 50px;
   &:before {
     content: "";
     position: absolute;
@@ -74,9 +77,9 @@
     content: "”";
     color: $mainOrangeColor;
     font-size: 100px;
+    left: -80px;
+    top: -25px;
     position: absolute;
-    left: -65px;
-    top: -15px;
     font-family: "Work Sans", sans-serif;
     font-weight: 600;
   }
@@ -86,22 +89,7 @@
     content: "02.";
   }
 }
-.about__title {
-  font-size: 38px;
-  line-height: 50px;
-  max-width: 275px;
-  font-weight: 700;
-  margin-bottom: 100px;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 2px;
-    top: 20px;
-    left: -120px;
-    background-color: $mainOrangeColor;
-  }
-}
+
 .about-team__items {
   display: grid;
   grid-gap: 30px;
@@ -189,6 +177,7 @@
 .about-services__item {
   max-width: 325px;
   width: 100%;
+  padding: 10px;
   &:hover .about-services__item-link {
     visibility: visible;
     opacity: 1;

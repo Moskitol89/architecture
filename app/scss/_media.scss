@@ -1,3 +1,11 @@
+@media (max-width: 1900px) {
+  .few-words:before,
+  .about-team:before,
+  .about-services:before {
+    display: none;
+  }
+}
+
 @media (max-width: 1550px) {
   .services__inner {
     margin: 300px auto 0 auto;
@@ -33,11 +41,26 @@
     height: auto;
   }
   .introduce,
-  .contacts{
+  .contacts {
     padding-bottom: 150px;
   }
   .testimonials {
     padding-bottom: 50px;
+  }
+  .few-words__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__title {
+    text-align: center;
+    margin: 0 auto 100px;
+  }
+  .few-words__quote {
+    margin: 100px auto 0;
+  }
+  .about-services__items {
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
 }
@@ -97,7 +120,17 @@
     justify-content: space-between;
     flex-direction: column;
   }
-
+  .footer__inner {
+    padding: 40px 0;
+  }
+  .footer__items{
+   flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__item:not(:first-child) {
+    margin-bottom: 50px;
+  }
   .introduce__text-block {
     margin-left: auto;
     margin-right: auto;
@@ -138,14 +171,21 @@
   .main-slider__slide-name {
     top: 85px;
   }
-.testimonials__slide-name {
-  top: 45px;
-}
+  .testimonials__slide-name {
+    top: 45px;
+  }
+  .about-team__items {
+    grid-template: 530px 530px 530px/ 350px 350px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 729px) {
   .news__item {
     margin-right: 0;
+  }
+  .about-team__items {
+    grid-template: 530px 530px 530px 530px/ 290px;
   }
 }
 
@@ -253,6 +293,57 @@
   .contacts__slide-name {
     top: 125px;
   }
+  .greeting {
+    margin-top: 150px;
+  }
+  .greeting__title {
+    line-height: 35px;
+    font-size: 33px;
+    margin-bottom: 20px;
+  }
+  .few-words__inner {
+    margin-top: 100px;
+    text-align: center;
+
+  }
+  .about__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .few-words {
+    margin-bottom: 100px;
+  }
+  .few-words__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .few-words__quote {
+    font-size: 14px;
+    margin-top: 40px;
+
+    &:before {
+      left: 5px;
+      top: 20px;
+      font-size: 65px;
+    }
+  }
+  .about-team {
+    margin-bottom: 100px;
+  }
+  .about-services__item {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .about-services__item-title {
+    font-size: 22px;
+  }
+  .about-services__item-text {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -267,6 +358,19 @@
   }
   .news__item-link {
     bottom: 15px;
+  }
+  .about__title:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -5px;
+    width: 100%;
+    left: 0;
+    top: auto;
+    background-color: #FBC710;
+  }
+  .about-team__item-social .social {
+    display: block;
   }
 }
 
