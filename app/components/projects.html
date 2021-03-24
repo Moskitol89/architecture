@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larson</title>
+    <link rel="SHORTCUT ICON" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        @@include("_header.html")
+
+        <section class="projects">
+            <div class="inner-container">
+                <h1 class="projects__title">Проекты</h1>
+                <div class="projects__filter">
+                    <button class="projects__filter-button active" type="button" data-filter="all">All</button>
+                    <button class="projects__filter-button" type="button" data-filter=".interior">Category A</button>
+                    <button class="projects__filter-button" type="button" data-filter=".architecture">Category B</button>
+                    <button class="projects__filter-button" type="button" data-filter=".building">Category C</button>
+                    <button class="projects__filter-button" type="button" data-filter=".exterior">Category C</button>
+                </div>
+                <div class="grid mixitup-container">
+                    <div class="grid-item mix interior" style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item building mix" style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item mix exterior grid-item--height2"
+                         style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item mix exterior grid-item--width2"
+                         style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item mix exterior grid-item--height2"
+                         style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item building mix" style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item mix architecture interior"
+                         style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="grid-item mix interior grid-item--width2"
+                         style="background-image: url(img/main/team/team-1.jpg)">
+                        <div class="grid-tem__inner">
+                            <h3 class="grid-item__title">
+                                Испанский интерьер
+                            </h3>
+                            <p class="grid-item__text">Projects for many large domestic and foreign corporations,
+                                enterprises in many elds such</p>
+                            <a class="grid-item__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @@include("_footer.html")
+</div>
+<script src="js/main.min.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>
