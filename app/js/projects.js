@@ -10,7 +10,8 @@ filterButtons.forEach(function (element) {
 });
 
 let masonry = new Masonry(".grid", {
-    gutter: 30
+    gutter: 30,
+    horizontalOrder: true
 });
 
 
@@ -21,6 +22,7 @@ let mixer = mixitup(".mixitup-container", {
     callbacks: {
         onMixEnd: function () {
             masonry.layout();
+            // masonry.reloadItems();
         }
     }
 });
