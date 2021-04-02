@@ -1,3 +1,4 @@
+
 let filterButtons = document.querySelectorAll(".projects__filter-button");
 
 filterButtons.forEach(function (element) {
@@ -11,7 +12,8 @@ filterButtons.forEach(function (element) {
 
 let masonry = new Masonry(".grid", {
     gutter: 30,
-    horizontalOrder: true
+    columnWidth: ".grid-sizer",
+    fitWidth: true
 });
 
 

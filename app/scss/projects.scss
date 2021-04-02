@@ -22,8 +22,13 @@
     color: $textOrangeColor;
   }
 }
+.grid {
+
+  margin: 0 auto;
+}
 .grid-item {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,10 +40,14 @@
   }
 }
 .grid-item--width2{
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
 }
 .grid-item--height2 {
   height: 730px;
+}
+.grid-sizer {
+  width: 350px;
 }
 .grid-tem__inner {
   position: relative;

@@ -178,6 +178,9 @@
     grid-template: 530px 530px 530px/ 350px 350px;
     justify-content: center;
   }
+  .projects .inner-container {
+    text-align: center;
+  }
 }
 
 @media (max-width: 729px) {
@@ -344,6 +347,33 @@
   .about-services__item-text {
     font-size: 13px;
   }
+  .projects {
+    margin-top: 150px;
+  }
+  .projects__title {
+    line-height: 38px;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .projects__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projects__filter-button:not(:last-child) {
+    margin-right: 0;
+  }
+  .projects__filter-button {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .grid-item__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .grid-item__link {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -371,6 +401,9 @@
   }
   .about-team__item-social .social {
     display: block;
+  }
+  .grid-sizer {
+    width: 270px;
   }
 }
 
