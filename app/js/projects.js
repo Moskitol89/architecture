@@ -1,4 +1,3 @@
-
 let filterButtons = document.querySelectorAll(".projects__filter-button");
 
 filterButtons.forEach(function (element) {
@@ -17,15 +16,16 @@ let masonry = new Masonry(".grid", {
 });
 
 
-let mixer = mixitup(".mixitup-container", {
+let projectsMixer = mixitup(".mixitup-container", {
     animation: {
         enable: false
     },
     callbacks: {
         onMixEnd: function () {
             masonry.layout();
-            // masonry.reloadItems();
         }
     }
 });
+// add active class for current link in header (2 - projects.html)
+document.querySelectorAll(".header__link")[2].classList.add("active");
 

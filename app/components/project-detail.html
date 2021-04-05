@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larson</title>
+    <link rel="SHORTCUT ICON" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        @@include("_header.html")
+    </div>
+    <section class="greeting">
+        <div class="inner-container">
+             <h1  class="greeting__title">Поместье</h1>
+        </div>
+        <!-- Slider main container -->
+        <div class="project-detail__swiper-container swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="project-detail__swiper-wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="project-detail__swiper-slide swiper-slide"
+                 style="background-image: url(img/project-detail/project-detail-1.jpg)"></div>
+                <div class="project-detail__swiper-slide swiper-slide"
+                     style="background-image: url(img/projects/projects-1.jpg)"></div>
+                <div class="project-detail__swiper-slide swiper-slide"
+                 style="background-image: url(img/project-detail/project-detail-2.jpg)"></div>
+
+                <div class="project-detail__swiper-slide swiper-slide"
+                 style="background-image: url(img/project-detail/project-detail-3.jpg)"></div>
+                <div class="project-detail__swiper-slide swiper-slide"
+                     style="background-image: url(img/project-detail/project-detail-4.jpg)"></div>
+
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </section>
+
+
+    @@include("_footer.html")
+</div>
+<script src="js/main.min.js"></script>
+<script src="js/project-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.project-detail__swiper-slide {
+  max-width: 1110px;
+  width: 100%;
+  height: 768px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0);
+  transition: filter 1s;
+}
+.project-detail__swiper-slide.swiper-slide-next,
+.project-detail__swiper-slide.swiper-slide-prev{
+ filter: grayscale(50%);
+}
