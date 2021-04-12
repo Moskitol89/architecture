@@ -8,7 +8,144 @@
   filter: grayscale(0);
   transition: filter 1s;
 }
+
 .project-detail__swiper-slide.swiper-slide-next,
-.project-detail__swiper-slide.swiper-slide-prev{
- filter: grayscale(50%);
+.project-detail__swiper-slide.swiper-slide-prev {
+  filter: grayscale(60%);
+}
+
+.project-about {
+  margin-top: 202px;
+  margin-bottom: 190px;
+}
+
+.project-about__descr-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 215px;
+}
+
+.project-about__descr-item {
+  max-width: 225px;
+  width: 100%;
+}
+
+.project-about__descr-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-about__descr-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: $textOrangeColor;
+}
+
+.project-about__employee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-about__employee-info {
+  width: 100%;
+  max-width: 665px;
+  color: #fff;
+}
+
+.project-about__employee-quote {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 200px;
+  line-height: 200px;
+  color: $textOrangeColor;
+}
+
+.project-about__employee-name {
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.project-about__employee-profession {
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.project-about__employee-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #767676;
+}
+
+.project-about__employee-photo {
+  max-width: 350px;
+  width: 100%;
+  height: 530px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.project-detail__process {
+  margin-bottom: 200px;
+}
+.project-detail__process-img {
+  max-width: 1110px;
+  width: 100%;
+  height: 768px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+}
+.project-detail__process-items {
+  counter-reset: num;
+  margin-bottom: 180px;
+}
+
+.process-item {
+  padding-left: 140px;
+  position: relative;
+  max-width: 570px;
+  width: 100%;
+  &:before {
+    content: "0" counter(num) ".";
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    color: $textOrangeColor;
+  }
+  &:not(:last-child) {
+    margin-bottom: 120px;
+  }
+}
+.process-item__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+.process-item__text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #767676;
+}
+.project-detail__process-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  color: #767676;
 }

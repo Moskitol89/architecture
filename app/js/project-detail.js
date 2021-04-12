@@ -2,6 +2,7 @@
 document.querySelectorAll(".header__link")[2].classList.add("active");
 
 const swiper = new Swiper('.project-detail__swiper-container', {
+    loop: true,
     slidesPerView: 'auto',
     centeredSlides: true,
     spaceBetween: 30,
