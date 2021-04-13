@@ -374,6 +374,53 @@
   .grid-item__link {
     font-size: 14px;
   }
+  .project-detail__swiper-slide {
+    height: 430px;
+  }
+  .project-about {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  .project-about__descr-items {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .project-about__descr-item {
+    width: fit-content;
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+  }
+  .project-about__employee {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .project-about__employee-quote {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .project-about__employee-name {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .project-about__employee-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .project-detail__process-items {
+    margin-bottom: 50px;
+  }
+  .project-detail__process {
+    margin-bottom: 50px;
+  }
+  .project-detail__process-text {
+    text-align: center;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -404,6 +451,16 @@
   }
   .grid-sizer {
     width: 270px;
+  }
+  .project-detail__process-img {
+    margin-bottom: 100px;
+  }
+  .process-item {
+    text-align: center;
+    padding-left: 0;
+  }
+  .process-item:before {
+    top: -50px;
   }
 }
 
