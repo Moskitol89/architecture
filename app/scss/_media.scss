@@ -51,7 +51,8 @@
     flex-direction: column;
     align-items: center;
   }
-  .about__title {
+  .about__title,
+  .title{
     text-align: center;
     margin: 0 auto 100px;
   }
@@ -309,7 +310,8 @@
     text-align: center;
 
   }
-  .about__title {
+  .about__title,
+  .title{
     font-size: 30px;
     line-height: 35px;
     margin-bottom: 20px;

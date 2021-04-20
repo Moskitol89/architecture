@@ -73,7 +73,7 @@ function browser() {
     browserSync.init({
         server: {
             baseDir: "app/",
-            index: "project-detail.html"
+            index: "news.html"
         }
     });
 }
