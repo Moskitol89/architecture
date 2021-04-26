@@ -122,3 +122,38 @@ body {
     color: $mainOrangeColor;
   }
 }
+@keyframes uprise {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes stretchOut {
+  from {
+    width: 0;
+  }
+  to {
+    width: 134px;
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    left: -9999px;
+  }
+  to {
+    left: -30px;
+  }
+}
