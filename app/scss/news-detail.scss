@@ -10,9 +10,10 @@
   background-position: center;
   display: flex;
   align-items: flex-end;
+
 }
 .news-detail__head-container {
-
+  margin-bottom: 70px;
 }
 .news-detail__head-subtitle {
   font-family: "Work Sans", sans-serif;
@@ -32,4 +33,13 @@
     opacity: 0;
     animation: uprise 1s 0.5s forwards;
   }
+}
+
+.news-detail__related-more {
+  opacity: 1;
+}
+.news-detail__related-item .news-page__info {
+  position: relative;
+  top: 0;
+  right: 0;
 }
