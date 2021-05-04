@@ -20,6 +20,16 @@
   font-weight: 600;
 }
 @font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Regular.woff2"),  url("../fonts/WorkSans-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/WorkSans-Bold.woff2"),  url("../fonts/WorkSans-Bold.woff");
+  font-weight: 700;
+}
+@font-face {
   font-family: "Open sans";
   src: url("../fonts/OpenSans-Regular.woff2"),  url("../fonts/OpenSans-Regular.woff");
   font-weight: 400;
