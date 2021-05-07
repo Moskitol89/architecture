@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larson</title>
+    <link rel="SHORTCUT ICON" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        @@include("_header.html")
+        <main class="contact-page">
+            <div class="inner-container">
+                <h1 class="contact-page__title title">Контакты</h1>
+            </div>
+            <div class="container">
+                <iframe class="contact-page__map"
+                        src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d667.3925014505897!2d37.607456116938636!3d55.7614231923675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d55.761519199999995!2d37.6078261!5e0!3m2!1sru!2sru!4v1620407653361!5m2!1sru!2sru"
+                        width="100%" height="770" style="border:0; filter: brightness(0.8)" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="inner-container">
+                <h3 class="contact-page__subtitle">Напишите нам</h3>
+                <form class="contact-page__form">
+                    <div class="contact-page__form-inner">
+                        <input type="text" placeholder="Имя" class="contact-page__form-name">
+                        <input type="text" placeholder="Электронная почта" class="contact-page__form-email">
+                        <input type="text" placeholder="Заголовок" class="contact-page__form-subject">
+                    </div>
+                    <textarea class="contact-page__form-text" placeholder="Сообщение"></textarea>
+                    <button class="contact-page__form-btn">отправить</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    @@include("_footer.html")
+</div>
+<script src="js/main.min.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

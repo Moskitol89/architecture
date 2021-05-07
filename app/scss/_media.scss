@@ -195,7 +195,17 @@
   .news-detail__img--third {
     grid-column: auto;
   }
-
+.contact-page__form-inner {
+  flex-direction: column;
+}
+  .contact-page__form-name,
+  .contact-page__form-email,
+  .contact-page__form-subject {
+    max-width: 100%;
+  }
+  .contact-page__map {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 729px) {
@@ -519,6 +529,9 @@
   }
   .news-detail__related {
     padding-top: 50px;
+  }
+  .contact-page__form-btn{
+    width: 100%;
   }
 }
 
