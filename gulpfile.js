@@ -46,6 +46,7 @@ function scripts() {
         "node_modules/masonry-layout/dist/masonry.pkgd.js",
         "node_modules/mixitup/dist/mixitup.js",
         "app/js/main.js"
+
     ])
         .pipe(concat("main.min.js"))
         .pipe(uglify())
@@ -72,8 +73,7 @@ function images() {
 function browser() {
     browserSync.init({
         server: {
-            baseDir: "app/",
-            index: "contact.html"
+            baseDir: "app/"
         }
     });
 }
@@ -86,7 +86,7 @@ function build() {
     return src([
         "app/css/style.min.css",
         "app/fonts/**/*",
-        "app/js/main.min.js",
+        "app/js/*.js",
         "app/*.html",
     ], {
         base: "app"
