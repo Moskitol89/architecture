@@ -4,7 +4,6 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "fullpage.js": "^3.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -16,7 +15,6 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
-    "jquery": "^3.5.1",
     "masonry-layout": "^4.2.2",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
